@@ -15,7 +15,7 @@ main ()
   int *p = NULL;
   p = (int *) malloc (sizeof (int));
 
-  printf("Sum = %d\n",add (10, 20));
+  printf ("Sum = %d\n", add (10, 20));
   return 0;
 
 }
