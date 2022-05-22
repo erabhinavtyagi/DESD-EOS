@@ -1,0 +1,21 @@
+// Main function for Calc
+
+
+#include<stdio.h>
+
+int add(int, int);
+int sub(int, int);
+int mul(int, int);
+int div(int, int);
+
+int main()
+{
+int a= 40 , b=20;
+ printf("ADD: %d",add(a,b));
+ printf("SUB: %d",sub(a,b));
+ printf("MUL: %d",mul(a,b));
+ printf("DIV: %d",div(a,b));
+ return 0;
+}
+
+
