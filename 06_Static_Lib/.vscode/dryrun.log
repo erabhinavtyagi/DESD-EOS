@@ -1,0 +1,9 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/cdac/ABHINAV/workserver/06_Static_Lib'
+gcc -c -o stat_lib_demo.o stat_lib_demo.c
+gcc -c -o add.o add.c
+gcc -c -o sub.o sub.c
+gcc -o stat_lib_demo stat_lib_demo.o add.o sub.o
+ar crv libstatic.a add.o sub.o
+make: Leaving directory '/home/cdac/ABHINAV/workserver/06_Static_Lib'
+ 
