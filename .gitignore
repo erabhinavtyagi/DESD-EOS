@@ -2,6 +2,7 @@
 ### C++ ###
 # Prerequisites
 *.d
+*.swp
 
 # Compiled Object files
 *.slo
