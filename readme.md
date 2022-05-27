@@ -23,4 +23,11 @@
 
 ## Day 5
     - Process Scheduling 
-    - Fork Demo Program
+    - Fork Demo
+        -created a child process
+
+## Day 6
+    - Fork Demo (cont.)
+        - created a child process and checked PID & PPID
+    - Zombie Process Program
+    - Orphan Process Program
