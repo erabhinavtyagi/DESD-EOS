@@ -20,6 +20,7 @@ int main()
             sleep(10);  
             // Parent on wait state and child process ends early and still shows an entry in process table.
             printf("Parent Process Completed.\n");
+            printf("Child Process ID = %d\t PPID = %d\n", getpid(), getppid());
         }
         else
             perror("Failed Fork\n");

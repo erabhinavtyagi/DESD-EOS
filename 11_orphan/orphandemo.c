@@ -11,8 +11,9 @@ int main()
     {
         if (id == 0)
         {
-            printf("Child Process ID = %d\t PPID = %d\n", getpid(), getppid());
+            printf("\nBefore Sleep: \nChild Process ID = %d\t PPID = %d\n\n", getpid(), getppid());
             sleep(10);
+            printf("\nAfter Sleep:  \nChild Process ID = %d\t PPID = %d\n", getpid(), getppid());
             printf("Child Process Completed.\n");
         }
         else if (id > 0)

@@ -1,6 +1,5 @@
 // Section -demo
 
-
 #include <stdio.h>
 #include <stdlib.h>
 int a;
@@ -12,8 +11,8 @@ int
 main ()
 {
   int result = 0;
-  int *p = NULL;
-  p = (int *) malloc (sizeof (int));
+  //int *p = NULL;
+  //p = (int *) malloc (sizeof (int));
 
   printf ("Sum = %d\n", add (10, 20));
   return 0;
