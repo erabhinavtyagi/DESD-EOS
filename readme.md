@@ -32,3 +32,12 @@
 - Zombie Process Program
 - Orphan Process Program
 - Program to check the number of Zombie Process a system can handle.
+- Installed EMUX in PC.
+
+## Day 7
+- Pipe Demo Program
+- FIFO Demo
+    -   Created FIFO with access permissions "0660" 
+    -   Sender program
+    -   Receiver program
+- Thread Demo Program
