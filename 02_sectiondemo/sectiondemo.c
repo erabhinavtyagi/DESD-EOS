@@ -7,7 +7,7 @@ int b = 10;
 
 int add (int, int);
 
-int
+int 
 main ()
 {
   int result = 0;

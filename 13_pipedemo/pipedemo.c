@@ -20,7 +20,7 @@ int main()
     {
         close (fd[1]);      // close write end
         printf("\nChild Process\n");
-
+        
         read(fd[0],buff,sizeof(buff));
         printf("Child Data Received: %s \n", buff);
     }
@@ -28,7 +28,7 @@ int main()
     {
         close (fd[0]);      // close read end
         printf("Parent Process\n");
-        
+       
         write (fd[1], "DESD\n", 5);
         printf("Parent : Wrote Data\n");
     }
