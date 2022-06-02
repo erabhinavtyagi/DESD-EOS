@@ -7,7 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>         // For exit()
 
-#define Max_Buff 8192
+#define Max_Buff 8192       // Buffer size = 8byte
 
 int main(int argc , char *argv[] )
 {
