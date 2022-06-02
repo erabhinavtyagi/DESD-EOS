@@ -31,11 +31,17 @@ void *decThread(void *arg)
     {
         res = pthread_mutex_trylock(&mutex_count);
         printf("result=%d\n",res);
-        
+        if(res == 0){
         count--;
         printf("Dec Thread : %d\n", count);
         pthread_mutex_unlock(&mutex_count);
+        }
+        else
+        {
+            printf("Doing Task2\n");
+        }
     }
+
 }
 
 int main(int argc,char const *argv[])
