@@ -31,6 +31,7 @@ void *decThread(void *arg)
     {
         res = pthread_mutex_trylock(&mutex_count);
         printf("result=%d\n",res);
+        
         if(res == 0){
         count--;
         printf("Dec Thread : %d\n", count);

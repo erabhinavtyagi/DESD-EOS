@@ -1,0 +1,29 @@
+1. LIBRARY Call Output
+
+i. .mp4 File Size = 57 MB
+
+    time ./cp_lb 'Linux Understatimending Shared Library Files.mp4' 1.mp4
+
+    real	0m0.001s
+    user	0m0.002s
+    sys	    0m0.000s
+
+ii. .pdf file Size = 5.5 MB
+    time ./cp_lb 'Galvin 8th Edition.pdf' 1.pdf
+
+    real	0m0.012s
+    user	0m0.004s
+    sys	    0m0.008s
+
+iii. .txt file Size = 3.5KB
+    time ./cp_lb sample3.txt 1.txt
+
+    real	0m0.002s
+    user	0m0.002s
+    sys	    0m0.000s
+
+
+
+2. SYSTEM Call Output
+
+i. 

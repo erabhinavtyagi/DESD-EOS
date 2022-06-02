@@ -8,45 +8,64 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdlib.h>
 
-#define MAX_BUFF 1024
+#define MAX_BUFF 2048               // Buffer Size 2KB
 
-int main (int argc, char** argv)
+int main (int argc , char *argv[])
 {
-int src, dest, num_read, num_write, n;
+int src, dest, n;                                 // File Descriptors 
+ssize_t read_in, write_out;
 char buf[MAX_BUFF];
 
-if ((src=open(argv[1], O_RDONLY)) < 0) 
+// Open Source File
+src = open(argv[1], O_RDONLY);
+if (src < 0)        
 {
    perror("Error opening source file");
-   exit(1);
+   return(-1);
+}
+else 
+// Read the source file.
+{
+   read_in = read(src, buf, sizeof( buf));
 }
 
-if ((dest = creat(argv[2], 0666)) < 0) 
+// Create the Destination file if it is not there.
+dest = creat(argv[2], O_CREAT);
+if (dest < 0)
 {
    perror("Error creating destination file");
-   exit(2);
-} 
-
- while((num_read = read(src, buf, sizeof( buf))) != 0) 
+   return(-1);
+}          
+   
+// Read The Source File.
+read_in = read(src, buf, sizeof( buf));        // return the number of bytes read into read_in
+while( read_in != 0) 
   {
-   if (num_read < 0) 
-    {
-       perror("Error reading source file");
-       exit(3);
-    }
-     num_write=0;
-
-    do {
-       if ((n=write(dest, &buf[num_write], num_read-num_write)) < 0) 
+   if (read_in < 0)                             // Print error if nothing to read.
+   {
+      perror("Error reading source file");
+      return(-1);
+   }
+   else
+   {
+   write_out=0;
+   // DO write to the destination file till write bytes equals to read bytes.
+   do {              
+       n = write(dest, &buf[write_out], read_in-write_out);   // return the number of bytes left to write into write_out
+       if (n < 0)                               
          {
-          perror("Error writing destination file");
-          exit(4);
-          }
-         num_write += n;
-       } 
-    while (num_write < num_read);
-  }
-    close(src);
-    close(dest);
+          perror("Error writing destination file");   
+          return(-1);
+         }
+         write_out += n;
+      } 
+    while (write_out < read_in);
+   }
+    close(src);         //Close Source file
+    close(dest);        //Close Destination file
+   }
+
+   return 0;
 }
