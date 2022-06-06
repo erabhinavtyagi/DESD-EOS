@@ -2,6 +2,7 @@
     "makefile.extensionOutputFolder": "./.vscode",
     "files.associations": {
         "unistd.h": "c",
-        "time.h": "c"
+        "time.h": "c",
+        "semaphore.h": "c"
     }
 }
