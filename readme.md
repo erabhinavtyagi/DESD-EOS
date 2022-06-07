@@ -81,3 +81,14 @@
 - Program without using Signalling Method (Problem)
 - Program using Signalling Method (Solution)
 - Program for Read/Write Lock Method.
+
+## Day 12
+- Program for Exec() system Call
+    - Exec_demo
+    - To create own Dummy_shell (Assignment)
+- Program for Barrier Synchronization
+    - Problem 
+    - Solution
+- Program for Conditional Variable
+    - Problem
+    - Solution
