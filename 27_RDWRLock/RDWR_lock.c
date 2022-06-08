@@ -34,7 +34,7 @@ printf("Reader 2: Left Critical Section\n");
 void *writer1(void *data)
 {
 printf("Writer 1: Entering Critical Section\n");
-pthread_rwlock_rdlock(&count_rwlock);
+pthread_rwlock_wrlock(&count_rwlock);
 printf("Writer 1: Inside Critical Section\n");
 count++;
 printf("Writer 1: %d\n", count);

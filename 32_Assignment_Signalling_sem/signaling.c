@@ -1,11 +1,12 @@
-// Solution using Semaphores (Signalling method)
+// Assignment : Adding two Numbers given by User by using Signalling method 
+// when both s1 = s2 = 1
 
-#include<stdio.h>
-#include<pthread.h>
-#include<semaphore.h>
+#include <stdio.h>
+#include <pthread.h>
+#include <semaphore.h>
 
 int a,b,sum;
-sem_t sem_i2p , sem_p2i;
+sem_t sem_i2p , sem_p2i; // i2p = Input to Processing Thread , p2i = Processing to Input Thread
 
 void *inputThread (void *data)
 {
@@ -33,7 +34,7 @@ int main()
 {
     pthread_t input,processing;
 
-    sem_init(&sem_i2p, 0 , 0);
+    sem_init(&sem_i2p, 0 , 1);
     sem_init(&sem_p2i, 0 , 1);
     
     pthread_create(&input,NULL,inputThread,NULL);

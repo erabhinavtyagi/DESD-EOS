@@ -85,10 +85,18 @@
 ## Day 12
 - Program for Exec() system Call
     - Exec_demo
-    - To create own Dummy_shell (Assignment)
 - Program for Barrier Synchronization
     - Problem 
     - Solution
 - Program for Conditional Variable
     - Problem
     - Solution
+- Assignments Completed
+    - Process Synchronization using Signalling Semaphore (With Initial values s1=s2=1) 
+    - Process Synchronization using Counting Semaphore
+    - To create own Dummy_shell
+
+## Day 13
+- Demo Program for Read & Write using Shared Memory
+- Demo Program to send & receive data using Message Queue
+
