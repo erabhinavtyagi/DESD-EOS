@@ -2,25 +2,27 @@
 
 #include <stdio.h>
 #include <unistd.h>
-#include <stdlib.h>
+#include <sys/wait.h>
+#include <sys/types.h>
 
 int main(int argc, char *argv[])
 {
     pid_t id;
     unsigned char cmd[1024];
-    printf("Before Exec()\n");
+    
+    printf("DUMMY SHELL # ");
+    scanf("%s", cmd);
+    
     id = fork();
     if(0==id)
     {
     printf("Child Process Activated.\n");
-    printf("DUMMY SHELL # ");
-    scanf("%s", cmd);
-    execl("/bin/ls","/bin/ls", NULL);    
+    execl(cmd,cmd, NULL);    
     }
     else
     {
         printf("Parent Process is Working.\n");
-        // wait(NULL);
+        wait(NULL);
     }
 
     return 0;
