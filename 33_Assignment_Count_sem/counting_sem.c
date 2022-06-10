@@ -1,7 +1,5 @@
 // Assignment : Counting Semaphore
-/* 
-
-*/
+// Memory Block Manager - Using the counting semaphore to manage the memory blocks.
 
 #include<pthread.h>
 #include<stdio.h>
@@ -13,6 +11,7 @@ sem_t s;
 void *processing(void *data)
 {
     int n = *(int *)data;
+        
     sem_wait(&s);
     printf("Thread[%d] acquired the resource.\n", n);
     sleep(1);

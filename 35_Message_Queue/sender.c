@@ -1,5 +1,10 @@
 // Demo program for Sending Data using Message Queue 
 
+//    long mq_flags;      Flags (ignored for mq_open()) 
+//    long mq_maxmsg;     Max. # of messages on queue 
+//    long mq_msgsize;    Max. message size (bytes) 
+//    long mq_curmsgs;    # of messages currently in queue(ignored for mq_open()) 
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -9,11 +14,6 @@
 #define MSG_SIZE 128
 
 struct mq_attr attr;
-
-//    long mq_flags;      Flags (ignored for mq_open()) 
-//    long mq_maxmsg;     Max. # of messages on queue 
-//    long mq_msgsize;    Max. message size (bytes) 
-//    long mq_curmsgs;    # of messages currently in queue(ignored for mq_open()) 
          
 mqd_t mqd;
 

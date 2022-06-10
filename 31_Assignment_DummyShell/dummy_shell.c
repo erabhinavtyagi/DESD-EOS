@@ -16,12 +16,12 @@ int main(int argc, char *argv[])
     id = fork();
     if(0==id)
     {
-    printf("Child Process Activated.\n");
-    execl(cmd,cmd, NULL);    
+    //printf("Child Process Activated.\n");
+    execlp(cmd,cmd,NULL);    
     }
     else
     {
-        printf("Parent Process is Working.\n");
+    //   printf("Parent Process is Working.\n");
         wait(NULL);
     }
 

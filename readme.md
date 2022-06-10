@@ -99,4 +99,26 @@
 ## Day 13
 - Demo Program for Read & Write using Shared Memory
 - Demo Program to send & receive data using Message Queue
+- Assignment -IPC
+1.  Shared Memory:
+    - P1: Declare your own structure => {pid, ppid}
+    - P1: Tranfer structure to another process P2
+    - P2: Receive this structure and print it out
+2.  Message Queue:
+    - P1: Declare your own structure => {pid, ppid}
+    - P1: Tranfer structure to another process P2
+    - P2: Receive this structure and print it out
+
+## Day 14
+
+- Demo Program for Socket
+    - Client
+    - Server
+- Assignment : Error Checking Mutex
+
+## Day 15
+
+- Shared Memory using Semaphores
+- Uboot & Custom Root File System
+
 
