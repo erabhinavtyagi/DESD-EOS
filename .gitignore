@@ -2,6 +2,10 @@
 ### C ###
 # Prerequisites
 *.d
+*.pdf
+*.mp3
+*.mp4
+*.mkv
 
 # Object files
 *.o
