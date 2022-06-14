@@ -8,9 +8,6 @@
 int count = 0;
 pthread_mutex_t mutex_count;
 
-void *incThread(void *);
-void *decThread(void *);
-
 void *incThread(void *arg)
 {
     while (1)

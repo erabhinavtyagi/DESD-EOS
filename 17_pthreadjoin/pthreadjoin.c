@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <pthread.h>
 
-
 pthread_t tid;
 
 void *display (void *data)

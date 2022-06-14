@@ -52,7 +52,7 @@ int main(int argc , char *argv[] )
         if (0 == out) break;
     }
   
-    printf("\nContents copied to %s", argv[2]);
+    printf("\nContents copied to %s\n", argv[2]);
   
     fclose(f_sender);
     fclose(f_receiver);

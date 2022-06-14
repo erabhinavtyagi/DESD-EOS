@@ -23,7 +23,7 @@ int main()
 
     if (-1 == shmfd)
     {
-        perror("shm_open");
+        perror("Error in Opening file.\n");
         return EXIT_FAILURE;
     }
 

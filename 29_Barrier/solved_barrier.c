@@ -54,8 +54,8 @@ pthread_create(&ethernetThread_id,NULL,ethernetThread,NULL);
 pthread_create(&lcdThread_id,NULL,lcdThread,NULL);
 pthread_join(serialThread_id,NULL);
 pthread_join(ethernetThread_id,NULL);
-pthread_join(lcdThread_id,NULL);                    // 3 Barrier Destroyed
+pthread_join(lcdThread_id,NULL);                    
 
-pthread_barrier_destroy(&dev_init_barrier);
+pthread_barrier_destroy(&dev_init_barrier);  // 3 Barrier Destroyed
 return 0;
 }

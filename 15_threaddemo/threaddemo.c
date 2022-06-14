@@ -3,7 +3,11 @@
 #include <unistd.h>
 
 pthread_t tid;
-void *display(void *);
+
+void *display(void *data)
+{
+    printf ("This is Thread.\n");
+}
 
 int main()
 {
@@ -17,7 +21,3 @@ int main()
     return 0;
 }
 
-void *display(void *data)
-{
-    printf ("This is Thread.\n");
-}

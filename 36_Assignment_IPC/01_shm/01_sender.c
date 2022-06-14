@@ -1,5 +1,6 @@
 // Assignment - IPC: Shared Memory
-// P2: Receive the structure from sender file and print it out.
+//     P1: Declare your own structure => {pid, ppid}
+//     P1: Tranfer structure to another process P2
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +25,7 @@ int main()
 
     if (-1 == shmfd)
     {
-        perror("shm_open");
+        perror("Error in Opening File\n");
         return EXIT_FAILURE;
     }
 
