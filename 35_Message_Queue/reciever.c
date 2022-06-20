@@ -18,7 +18,7 @@ int main()
     unsigned int priority;
 
     // Structure Defination
-    attr.mq_maxmsg = 4;
+    attr.mq_maxmsg = 10;
     attr.mq_msgsize = MSG_SIZE;
     attr.mq_curmsgs = 0;
     attr.mq_flags = 0;
